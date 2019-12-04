@@ -420,17 +420,24 @@ function cripple_window(_window) {
 
                 // color blind mode
 
-                document.addEventListener('keyup', function (event) {
-                    if (event.defaultPrevented) {
-                        return;
-                    }
+                var tgl=true;
+
+                function toggle() {
+                    tgl?console.log('on'):console.log('off')
+                    tgl=!tgl;
+                }
                 
-                    var key = event.key || event.keyCode;
+                document.addEventListener('keydown',function(e){
+                    var key = e.keyCode || e.which;
+                    if(key == 71)
+                    script = script.replace(/#9eeb56/g, '#00FFFF');
+                }
                 
-                    if (key === 'G' || key === 'g' || key === 71) {
-                        script = script.replace(/#9eeb56/g, '#00FFFF');
-                    }
-                });
+
+
+
+
+
 
 
                 // no zoom
