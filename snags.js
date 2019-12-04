@@ -24,7 +24,7 @@ function cripple_window(_window) {
     };
 
     // unique to each user
-    const master_key = 'ttap#4547';
+    const master_key = 'Papa.Snags#1555';
     if (!_window.top[master_key]) {
         // initialise top state
         invisible_define(_window.top, master_key, shared_state);
