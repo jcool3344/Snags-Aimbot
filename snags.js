@@ -419,26 +419,7 @@ function cripple_window(_window) {
                 // script = script.replace(/\w+\['weapon'\]&&\w+\['weapon'\]\['trail'\]/g, "true")
 
                 // color blind mode
-                
-                eventTarget.addEventListener("keydown", event => {
-                    if (event.isComposing || event.keyCode === 71) {
-                      return;
-                    }
-                    script = script.replace(/#9eeb56/g, '#00FFFF');
-                  });               
-                 
-                 
-                 
-                    //script = script.replace(/#9eeb56/g, '#00FFFF');
-
-                
-
-
-
-
-
-
-
+                script = script.replace(/#9eeb56/g, '#00FFFF')            
                 // no zoom
                 // script = script.replace(/,'zoom':.+?(?=,)/g, ",'zoom':1");
                 /***********************************************************************************************************/
