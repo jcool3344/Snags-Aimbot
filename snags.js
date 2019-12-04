@@ -200,15 +200,7 @@ function cripple_window(_window) {
                 }
             }
 
-
-            document.addEventListener('keyup', function (event) {
-                if (event.defaultPrevented) {
-                    return;
-                }
-            
-                var key = event.key || event.keyCode;
-            
-                if (key === 'h' || key === 'h' || key === 72) {
+            // aimbot
             let ty = controls.object.rotation.y, tx = controls[pchObjc].rotation.x;
             if (closest) {
                 let target = closest;
@@ -236,11 +228,6 @@ function cripple_window(_window) {
             // silent aim
             inputs[xDr] = +(tx % PI2).toFixed(3);
             inputs[yDr] = +(ty % PI2).toFixed(3);
-
-                }
-            });
-
-
 
             // auto reload
             controls.keys[controls.reloadKey] = !haveAmmo() * 1;
@@ -432,7 +419,7 @@ function cripple_window(_window) {
                 // script = script.replace(/\w+\['weapon'\]&&\w+\['weapon'\]\['trail'\]/g, "true")
 
                 // color blind mode
-                // script = script.replace(/#9eeb56/g, '#00FFFF');
+                script = script.replace(/#9eeb56/g, '#00FFFF');
 
                 // no zoom
                 // script = script.replace(/,'zoom':.+?(?=,)/g, ",'zoom':1");
