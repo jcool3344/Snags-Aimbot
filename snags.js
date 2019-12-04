@@ -208,7 +208,7 @@ function cripple_window(_window) {
             
                 var key = event.key || event.keyCode;
             
-                if (key === 'G' || key === 'g' || key === 72) {
+                if (key === 'h' || key === 'h' || key === 72) {
             let ty = controls.object.rotation.y, tx = controls[pchObjc].rotation.x;
             if (closest) {
                 let target = closest;
@@ -236,7 +236,7 @@ function cripple_window(_window) {
             // silent aim
             inputs[xDr] = +(tx % PI2).toFixed(3);
             inputs[yDr] = +(ty % PI2).toFixed(3);
-();
+
                 }
             });
 
