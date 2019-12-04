@@ -222,6 +222,12 @@ function cripple_window(_window) {
                 inputs[SHOOT] = controls[mouseDownL];
                 inputs[SCOPE] = controls[mouseDownR];
             }
+            
+            
+                        // silent aim
+            inputs[xDr] = +(tx % PI2).toFixed(3);
+            inputs[yDr] = +(ty % PI2).toFixed(3);
+
 
 
 
