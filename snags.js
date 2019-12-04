@@ -327,7 +327,7 @@ function cripple_window(_window) {
                         c.fillText(e.name, x, y);
                         c.strokeText(e.name, x, y);
                         c.font = "30px Sans-serif";
-                        c.fillStyle = "purple";
+                        c.fillStyle = "orange";
                         c.strokeStyle='black';
                         y += 35;
                         c.fillText(e.weapon.name, x, y);
