@@ -199,35 +199,7 @@ function cripple_window(_window) {
                     closest = e;
                 }
             }
-            // aimbot
-            let ty = controls.object.rotation.y, tx = controls[pchObjc].rotation.x;
-            if (closest) {
-                let target = closest;
-                let y = target.y3 + playerHeight - (headScale/* + hitBoxPad*/) / 2 - target.crouchVal * crouchDst;
-                if (me.weapon.nAuto && me.didShoot) {
-                    inputs[SHOOT] = 0;
-                } else if (!me.aimVal) {
-                    inputs[SHOOT] = 1;
-                    inputs[SCOPE] = 1;
-                } else {
-                    inputs[SCOPE] = 1;
-                }
-
-                ty = getDir(controls.object.position.z, controls.object.position.x, target.z3, target.x3);
-                tx = getXDire(controls.object.position.x, controls.object.position.y, controls.object.position.z, target.x3, y, target.z3);
-
-                // perfect recoil control
-                tx -= .3 * me[recoilAnimY];
-            } else {
-                inputs[SHOOT] = controls[mouseDownL];
-                inputs[SCOPE] = controls[mouseDownR];
-            }
-
-
-            // silent aim
-            inputs[xDr] = +(tx % PI2).toFixed(3);
-            inputs[yDr] = +(ty % PI2).toFixed(3);
-
+            
             // auto reload
             controls.keys[controls.reloadKey] = !haveAmmo() * 1;
 
